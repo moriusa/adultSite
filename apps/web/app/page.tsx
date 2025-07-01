@@ -1,7 +1,7 @@
 import Image, { type ImageProps } from "next/image";
 import { Button } from "@repo/ui/button";
 import styles from "./page.module.css";
-import Header from './components/Header';
+import Header from './components/header/Header';
 import VideoCard from './components/VideoCard';
 import Sidebar from './components/Sidebar';
 import Footer from './components/Footer';
