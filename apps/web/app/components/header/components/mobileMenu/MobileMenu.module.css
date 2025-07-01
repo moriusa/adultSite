@@ -1,0 +1,132 @@
+.mobileMenu {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  transform: translateY(-100%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-normal);
+  z-index: 999;
+}
+
+.mobileMenu.open {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobileMenuContent {
+  padding: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.mobileNav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.mobileNavLink {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  color: var(--foreground);
+  text-decoration: none;
+  font-weight: 500;
+  padding: var(--space-md);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-normal);
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.mobileNavLink:hover {
+  background: var(--gradient-primary);
+  color: white;
+  transform: translateX(10px);
+}
+
+.mobileNavIcon {
+  font-size: 1.2rem;
+}
+
+.mobileSearch {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.mobileSearchInput {
+  flex: 1;
+  padding: var(--space-md);
+  border: 2px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: white;
+  font-size: var(--font-size-base);
+}
+
+.mobileSearchInput:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+}
+
+.mobileSearchButton {
+  background: var(--gradient-primary);
+  border: none;
+  padding: var(--space-md);
+  border-radius: var(--radius-lg);
+  color: white;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+}
+
+.mobileSearchButton:hover {
+  background: var(--gradient-secondary);
+  transform: scale(1.05);
+}
+
+.mobileAuth {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.mobileLoginButton,
+.mobileRegisterButton {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  padding: var(--space-md);
+  border: none;
+  border-radius: var(--radius-lg);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+}
+
+.mobileLoginButton {
+  background: transparent;
+  color: var(--foreground);
+  border: 2px solid var(--primary);
+}
+
+.mobileLoginButton:hover {
+  background: var(--primary);
+  color: white;
+}
+
+.mobileRegisterButton {
+  background: var(--gradient-primary);
+  color: white;
+}
+
+.mobileRegisterButton:hover {
+  background: var(--gradient-secondary);
+  transform: scale(1.05);
+} 
